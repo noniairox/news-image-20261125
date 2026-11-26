@@ -1,23 +1,18 @@
-"""THE WORLD TODAY — 25 November 2026 (news-image-20261125, v2a).
+"""THE WORLD TODAY — a dense broadsheet front page summing up the world's
+news of Wednesday, 25 November 2026 (make.fun news-image-20261125).
 
-Copies the pre-rendered front-page image to the grader's output
-directory. Pure standard library; the copy is byte-identical by
-construction, so both grader runs produce the same bytes.
+The entry image is entry.png beside this file; this program copies it to
+the output directory (MAKEFUN_OUTPUT_DIR, default /output). Pure stdlib.
 """
-
 import os
 import shutil
+import sys
 
 
 def main():
-    here = os.path.dirname(os.path.abspath(__file__))
-    src = os.path.join(here, "entry.png")
-    if not os.path.isfile(src):
-        raise SystemExit("entry.png not found next to main.py: " + src)
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+    src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "entry.png")
     os.makedirs(out_dir, exist_ok=True)
-    # copyfile preserves the bytes exactly: both grader runs write
-    # the same file, so the entry is deterministic.
     shutil.copyfile(src, os.path.join(out_dir, "entry.png"))
 
 
