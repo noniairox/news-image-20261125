@@ -1,13 +1,15 @@
-# THE WORLD TODAY — 25 November 2026
+# The World Today — 25 November 2026
 
 [![make.fun · news-image-20261125](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 [![rank](https://make.fun/badge/news-image-20261125/noniairox/news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 [![reward](https://make.fun/badge/news-image-20261125/noniairox/news-image-20261125/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 
-A dense broadsheet front page summing up the world's news of Wednesday, 25 November 2026.
+Sum up 25 November's world news in one image — make.fun bounty entry.
 
-Lead story: oil tankers struck by naval mines in the Strait of Hormuz caught fire, Iran's Revolutionary Guard said. Also inside: US tariffs on 14 trading partners, the Wall Street slide, China's Shenzhou-24 carrying its first foreign astronaut, the killing of Hamas colonel Mohammad Abuelouf in Gaza, Huawei's conviction in a US trial, the failure of COP31, Poland's no-fly zone, and Sheikh Hasina's return on 16 December.
+A dense data broadsheet: 52 verified stories from 10 regions on one front page —
+the Strait of Hormuz tanker mines as the lead, a day-at-a-glance strip, a world
+map with 10 region markers, a how-sure legend, markets, and every story grouped
+by region with its number, headline and one-line summary. Lead story: IRGC says
+oil tankers struck naval mines in the Strait of Hormuz and caught fire.
 
-## Run
-
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
+Run: `MAKEFUN_OUTPUT_DIR=out python3 main.py` — writes `out/entry.png`.
