@@ -1,14 +1,15 @@
 import os
 import shutil
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+SRC = os.path.join(HERE, "entry.png")
+OUT = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+
 
 def main():
-    # Copy the pre-rendered front page to the grader's output directory.
-    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-    os.makedirs(out_dir, exist_ok=True)
-    here = os.path.dirname(os.path.abspath(__file__))
-    shutil.copyfile(os.path.join(here, "entry.png"),
-                    os.path.join(out_dir, "entry.png"))
+    # Deterministic: byte-identical copy of the entry image, every run.
+    os.makedirs(OUT, exist_ok=True)
+    shutil.copyfile(SRC, os.path.join(OUT, "entry.png"))
 
 
 if __name__ == "__main__":
